@@ -1,7 +1,7 @@
 # NOMA
 This repo has our initial codes for offline implementation of NOMA with CVX
-Purpose of the Test:
 
+Purpose of the Test:
          - The test is for a MxN NOMA system where an M-antenna AP serves N single-antenna users.
 
          - The objective is to design the appropriate precoders at the AP to maximize the weighted
