@@ -1,7 +1,7 @@
-# NOMA
-This repo has our initial codes for offline implementation of NOMA with CVX
+## NOMA
+_This repo has our initial codes for offline implementation of NOMA with CVX._
 
-Purpose of the test:
+**1. Purpose of the test:**
 
          o The test is for a MxN NOMA system where an M-antenna AP serves N single-antenna users.
 
@@ -12,7 +12,7 @@ Purpose of the test:
            CVX solver for optimization. For real-time implementation, we used python and CVXOPT which 
            the codes will be uploaded after publishing the paper.
 
-Procedure at high level:
+**2. Procedure at high level:**
 
          o Phase 1 (sounding): For the sounding, you can use both downlink or uplink channels. If 
            uplink is used, you should consider calibration as a must to compensate the DL/UL mismatch.
@@ -30,7 +30,7 @@ Procedure at high level:
            interference cancellation method. There are two options for SIC, regular ZF-based SIC and
            our particular SIC which works slightly better.
 
-Codes for each phase:
+**3. Codes for each phase:**
 
          o Phase 1: "tx_signal_gen" for generating sounding packets and "my_chan_estimate" for channel 
            estimation with user-defined over sampling.
@@ -42,14 +42,14 @@ Codes for each phase:
          o Phase 4:  data_rx_decode or data_rx_decode_G_filter or ZF_vs_our_method based on the config.
 
 
-Stored data: 
+**4. Stored data:**
 
          o channel_ui.mat stores the downlink channels between the AP and user i at 52 subcarriers.
 
          o v_stack.mat has the stack of optimal precoders to be used for frame assembly.
          
 
-Outputs:
+**5. Outputs:**
 
          o The final results at users side are: EVM of decoded data, constellation of each SIC's stage,
            synchornization results, and freq. offsets.
